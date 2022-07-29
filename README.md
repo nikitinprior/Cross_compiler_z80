@@ -22,35 +22,35 @@ To do this, run the following commands in the directory with the source code of 
 
 1. For the control program of the zc3 compiler
 
-gcc -O2 -o zc3 zc3.c
+        gcc -O2 -o zc3 zc3.c
 
 2. For cpp_new3 preprocessor program
 
-gcc -O2 -ocpp_new3 cpp.c cpy.c getargs.c fname.c
+        gcc -O2 -ocpp_new3 cpp.c cpy.c getargs.c fname.c
 
 To create a preprocessor, it is desirable to use the source code of the Mark Ogden version, as it fixes some bugs and provides additional features.
 
 3. For the first pass program p1x3
 
-gcc -O2 -op1x3 cclass.c emit.c expr.c lex.c main.c op.c program.c stmt.c sym.c type.c memchk.c
+        gcc -O2 -op1x3 cclass.c emit.c expr.c lex.c main.c op.c program.c stmt.c sym.c type.c memchk.c
 
 The restored source code of the first pass program will be available in the repository after Mark Ogden has finished styling it.
 
 4. For cgen3 code generation program
 
-gcc -o xcgen3 -O3 cgen.c
+        gcc -o xcgen3 -O3 cgen.c
 
 5. For optim3 optimization program
 
-gcc -O2 -o optim3 optim.c
+        gcc -O2 -o optim3 optim.c
 
 6. For zasx3 macro assembler program
 
-gcc -o zasx3 -O2 code.c cclass.c expr.c lex.c macro.c main.c kwd.c parse.c sym.c tlab.c emulate.c
+        gcc -o zasx3 -O2 code.c cclass.c expr.c lex.c macro.c main.c kwd.c parse.c sym.c tlab.c emulate.c
 
 7. For linq3 linker program
 
-gcc -O2 -o linq3 a.c b.c c.c ds.c e.c extra.c getargs.c fname.c
+        gcc -O2 -o linq3 a.c b.c c.c ds.c e.c extra.c getargs.c fname.c
 
 Note that the executable files must be named: cpp_new3, p1x3, cgen3, optim3, zasx3, and linq3, since they are used in the source code of the zc3.c control program to execute these programs.
 
@@ -60,19 +60,19 @@ Note that the executable files must be named: cpp_new3, p1x3, cgen3, optim3, zas
 
 Include files can be placed in the directory
 
-/usr/local/HiTech/include80
+        /usr/local/HiTech/include80
 
 Files with libraries of standard functions and run-time initialization modules can be placed in the directory
 
-/usr/local/HiTech/lib80
+        /usr/local/HiTech/lib80
 
 To compile programs for CP/M, crtcpm.obj and libc.lib files must be present in this directory. To compile programs for the UZI-180, crtuzi.obj and libcuzi.lib files must be present in this directory.
 
 In addition, to specify the default search paths for include files and libraries, you need to define two more variables
 
-export INCDIR80="/usr/local/HiTech/include80/"
+        export INCDIR80="/usr/local/HiTech/include80/"
 
-export LIBDIR80="/usr/local/HiTech/lib80/"
+        export LIBDIR80="/usr/local/HiTech/lib80/"
 
 You can add them to the .bash_profile file in the user's home directory.
 
@@ -82,9 +82,9 @@ In addition, the source code of two more utilities has been restored.
 
 To compile the object file content viewer and the library maintainer, run the commands
 
-gcc -O2 -odump3 dump3.c
+        gcc -O2 -odump3 dump3.c
 
-gcc -O2 -olibr3 libr.c
+        gcc -O2 -olibr3 libr.c
 
 and copy the executable files dump3 and libr3 to the directory where the cross compiler executable files are located.
 
